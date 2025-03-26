@@ -6,13 +6,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="imgs/Sample_code_icon.svg.png">
     <title>Andrew Symes | Software Developer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
+        body {
+            background-color: rgb(208, 215, 221);
+        }
+        #main-section {
+            background-color: white;
         }
         .project-card:hover {
             cursor: pointer;
@@ -40,6 +43,7 @@
         }
         .card {
             border: none;
+            background: none;
         }
         .card-header {
             background: none;
@@ -54,14 +58,64 @@
             text-decoration: none;
             color: black;
         }
+        #dark-light-toggle .bi-moon-fill {
+            display: none;
+        }
+        #dark-light-toggle .bi-sun-fill {
+            display: initial;
+        }
+        #dark-light-toggle {
+                background-color: white;
+                color: rgb(188, 188, 27);
+                border-style: solid;
+                border-color: rgb(188, 188, 27);
+            }
+        [data-theme = dark] {
+            body {
+                background-color: #05151d;                
+            }
+            #main-section {
+                background-color: #353c49;
+            }
+            * {
+                color: white !important;
+            }
+            .project-card:hover {
+                cursor: pointer;
+                background-color: rgb(70, 80, 89);
+            }
+            .card-header {
+                border-color: white;
+            }
+            #dark-light-toggle .bi-moon-fill {
+                display: initial;
+            }
+            #dark-light-toggle .bi-sun-fill {
+                display: none;
+            }
+            #dark-light-toggle {
+                background-color: #000;
+                border: none;
+            }
+        }
     </style>
 </head>
-<body class="" style="background-color: rgb(243, 247, 253);">
+<body>
     <div class="dark-overlay d-none"></div>
     <div class="container-fluid">
-        <div class="row justify-content-center mx-4">
-            <div class="col-10 bg-white px-5">
-                <div class="mx-5 mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div id="main-section" class="col-12 col-lg-11 col-xxl-10 px-3 px-lg-5">
+                <div class="w-100 d-flex justify-content-end mt-5">
+                    <button id="dark-light-toggle" class="btn rounded-circle p-3 d-flex justify-content-center align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mx-0 mx-lg-5 mt-5">
                     <div class="row my-3">
                         <div class="col-7 py-3">
                             <div class="card">
@@ -76,7 +130,13 @@
                             </div>
                         </div>
                         <div class="col-5">
-                            <img style="transform: rotate(4deg);" class="img-fluid rounded-lg" src="imgs/profile_photo3.jpg" alt="Andrew Symes Profile Photo">
+                            <div class="position-relative">
+                                <img style="transform: rotate(-2deg);" class="profile-img img-fluid w-100 rounded-lg position-absolute" src="imgs/image000000.jpg" alt="Andrew Symes Profile Photo">
+                                <img style="transform: rotate(2deg);" class="profile-img img-fluid w-100 rounded-lg position-absolute invisible" src="imgs/profile_photo2.JPG" alt="Andrew Symes Profile Photo">
+                                <img style="transform: rotate(4deg);" class="profile-img img-fluid w-100 rounded-lg position-absolute invisible" src="imgs/profile_photo3.jpg" alt="Andrew Symes Profile Photo">
+                            </div>
+                            <img style="transform: rotate(6deg);" class="img-fluid rounded-lg invisible" src="imgs/image000000.jpg" alt="Andrew Symes Profile Photo">
+
                             <div class="w-100 mt-3">
                                 <div class="me-3">
                                     <a href="https://www.linkedin.com/in/andrewsymessoftdev/" class="social-link">
@@ -106,7 +166,7 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-7">
+                        <div class="col-12 col-lg-7">
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="header-text">Work</h4>
@@ -114,7 +174,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-2">
-                                            <img class="img-fluid" src="imgs/overnite_software_inc_logo.jpg" alt="OverNite Software Inc. Icon">
+                                            <img class="img-fluid rounded" src="imgs/overnite_software_inc_logo.jpg" alt="OverNite Software Inc. Icon">
                                         </div>
                                         <div class="col-10">
                                             <h5 class="mb-0">Full Stack Software Developer | OverNite Software Inc · 3yrs</h5>
@@ -129,7 +189,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-2">
-                                            <img class="img-fluid" src="imgs/My-project-11.png" alt="OverNite Software Inc. Icon">
+                                            <img class="img-fluid rounded" src="imgs/My-project-11.png" alt="OverNite Software Inc. Icon">
                                         </div>
                                         <div class="col-10">
                                             <h5 class="mb-0">Diagnostics Coordinator | Hephzibah Visiting Clinicains · 1yr</h5>
@@ -143,14 +203,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5">
+                        <div class="col-12 col-lg-5">
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="header-text">Education</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="row mb-1">
-                                        <div class="col-2">
+                                        <div class="col-2 px-0 px-sm-2">
                                             <img class="img-fluid rounded-circle" src="imgs/CSU_icon.png" alt="Colorate State University Peublo Icon">
                                         </div>
                                         <div class="col-10">
@@ -159,7 +219,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-1">
-                                        <div class="col-2">
+                                        <div class="col-2 px-0 px-sm-2">
                                             <img class="img-fluid" src="imgs/DallasCollege.png" alt="Colorate State University Peublo Icon">
                                         </div>
                                         <div class="col-10">
@@ -168,7 +228,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-1">
-                                        <div class="col-2">
+                                        <div class="col-2 px-0 px-sm-2">
                                             <img class="img-fluid" src="imgs/NewUlogo-large-1.png" alt="Colorate State University Peublo Icon">
                                         </div>
                                         <div class="col-10">
@@ -181,7 +241,7 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-9">
+                        <div class="col-12 col-lg-9">
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="header-text d-flex">
@@ -192,7 +252,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-12 col-xxl-6">
                                             <div class="card project-card pointer">
                                                 <div class="card-body">
                                                     <h5>Movie Frame Condenser - Java</h5>
@@ -204,7 +264,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12 col-xxl-6">
                                             <div class="card project-card pointer">
                                                 <div class="card-body">
                                                     <h5>3D Renderer - Java</h5>
@@ -216,7 +276,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12 col-xxl-6">
                                             <div class="card project-card pointer">
                                                 <div class="card-body">
                                                     <h5>Checklist App - React</h5>
@@ -228,7 +288,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12 col-xxl-6">
                                             <div class="card project-card pointer">
                                                 <div class="card-body">
                                                     <h5>Photo Tiles - java</h5>
@@ -244,7 +304,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-12 col-lg-3">
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="header-text d-flex">
@@ -280,6 +340,43 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
+    setInterval(()=>{
+        current = $('.profile-img:not(.invisible)')
+        next = current.next().length > 0 ? current.next() : $('.profile-img').first()
+        current.addClass('invisible')
+        next.removeClass('invisible')
+    }, 4000)
+
+    
+    if (localStorage.getItem("theme")  == "dark"){
+        $('html').attr('data-theme', 'dark')
+    }else if(localStorage.getItem("theme")  == "light"){
+        $('html').removeAttr('data-theme')
+    }else{
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            $('html').attr('data-theme', 'dark')
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if(event.matches){
+                $('html').attr('data-theme', 'dark')
+            }else{
+                $('html').removeAttr('data-theme')
+            }
+        });
+    }
+    
+    $('#dark-light-toggle').click(()=>{        
+        if($('html').attr('data-theme') == 'dark'){
+            $('html').removeAttr('data-theme')
+            localStorage.setItem("theme", 'light')
+        }else{
+            $('html').attr('data-theme', 'dark')
+            localStorage.setItem("theme", 'dark')
+        }
+    })
+
+
+
     // $(".project-card").focusin((e)=>{
     //     $(e.target).addClass('focus')
     //     $('.dark-overlay').removeClass('d-none')
