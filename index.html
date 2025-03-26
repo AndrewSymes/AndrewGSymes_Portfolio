@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Andrew Symes | Software Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .project-card:hover {
+            cursor: pointer;
+            background-color: whitesmoke;
+        }
+        .project-card.focus {
+            position: fixed !important;
+            top: 50% !important;
+            right: 50% !important;
+            width: 50vw !important;
+            transform: translate(50%,-50%) !important;
+            height: 50vh !important;
+            z-index: 100000000 !important;
+            cursor: default;
+        }
+        .dark-overlay{
+            opacity:    0.5; 
+            background: #000; 
+            width:      100%;
+            height:     100%; 
+            z-index:    10;
+            top:        0; 
+            left:       0; 
+            position:   fixed; 
+        }
+        .card {
+            border: none;
+        }
+        .card-header {
+            background: none;
+        }
+        .fw-larger {
+            font-size: larger;
+        }
+        .rounded-lg {
+            border-radius: 1rem;
+        }
+        .social-link {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body class="" style="background-color: rgb(243, 247, 253);">
+    <div class="dark-overlay d-none"></div>
+    <div class="container-fluid">
+        <div class="row justify-content-center mx-4">
+            <div class="col-10 bg-white px-5">
+                <div class="mx-5 mt-5 pt-5">
+                    <div class="row my-3">
+                        <div class="col-7 py-3">
+                            <div class="card">
+                                <h1 class="fw-bold">Andrew Giles Symes</h1>
+                                <h2 class="">Full Stack Software Developer</h2>
+                                <div class="card-body fw-larger">
+                                    <p class="pt-3"><b>Early Life:</b> Born in Fort Worth, TX. Grew up in Lancaster, TX. Now Living in Waxahachie, TX.</p>
+                                    <p class="pt-1"><b>Strengths:</b> Hard worker, fast learning, natural problem solver.</p>
+                                    <p class="pt-1"><b>Hobbies:</b> Mountain biking, guitar, rock climbing.</p>
+                                    <p class="pt-1"><b>Favorite Book:</b> <i>Where The Wind Leads</i>, Vinh Chung.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <img style="transform: rotate(4deg);" class="img-fluid rounded-lg" src="imgs/profile_photo3.jpg" alt="Andrew Symes Profile Photo">
+                            <div class="w-100 mt-3">
+                                <div class="me-3">
+                                    <a href="https://www.linkedin.com/in/andrewsymessoftdev/" class="social-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                                        </svg>
+                                        Linkedin
+                                    </a>
+                                </div>
+                                <div class="me-3">
+                                    <a href="https://github.com/AndrewSymes/" class="social-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                </div>
+                                <div class="me-3">
+                                    <a href="https://letterboxd.com/AndrewGSymes/" class="social-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                                          </svg>
+                                        Letterboxd
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-7">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="header-text">Work</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img class="img-fluid" src="imgs/overnite_software_inc_logo.jpg" alt="OverNite Software Inc. Icon">
+                                        </div>
+                                        <div class="col-10">
+                                            <h5 class="mb-0">Full Stack Software Developer | OverNite Software Inc · 3yrs</h5>
+                                            <small>Angleton, TX, USA</small>
+                                            <ul>
+                                                <li>Pen tested site for XSS attacks and ensured site security.</li>
+                                                <li>Used numpy to slash algorithm run times.</li>
+                                                <li>Reduced major algorithm runtime from 18 seconds to 9 milliseconds.</li>
+                                                <li>Establish 80% automated test coverage</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img class="img-fluid" src="imgs/My-project-11.png" alt="OverNite Software Inc. Icon">
+                                        </div>
+                                        <div class="col-10">
+                                            <h5 class="mb-0">Diagnostics Coordinator | Hephzibah Visiting Clinicains · 1yr</h5>
+                                            <small>Desoto, TX, USA</small>
+                                            <ul>
+                                                <li>Increased diagnostics turnaround times through automation and data analytics.</li>
+                                                <li>Automated appointment scheduling and reminder calls/texts.</li>            
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="header-text">Education</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row mb-1">
+                                        <div class="col-2">
+                                            <img class="img-fluid rounded-circle" src="imgs/CSU_icon.png" alt="Colorate State University Peublo Icon">
+                                        </div>
+                                        <div class="col-10">
+                                            <h5 class="mb-0">Colorado State University Pueblo | Software Development</h5>
+                                            <small>Pueblo, Co, USA</small>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <div class="col-2">
+                                            <img class="img-fluid" src="imgs/DallasCollege.png" alt="Colorate State University Peublo Icon">
+                                        </div>
+                                        <div class="col-10">
+                                            <h5 class="mb-0">Dallas College | Associate of Science</h5>
+                                            <small>Dallas, TX, USA</small>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <div class="col-2">
+                                            <img class="img-fluid" src="imgs/NewUlogo-large-1.png" alt="Colorate State University Peublo Icon">
+                                        </div>
+                                        <div class="col-10">
+                                            <h5 class="mb-0">Udemy | Java Programming Masterclass</h5>
+                                            <small>Online</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-9">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="header-text d-flex">
+                                        <div class="p-0 m-0">
+                                            Projects
+                                        </div>
+                                    </h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="card project-card pointer">
+                                                <div class="card-body">
+                                                    <h5>Movie Frame Condenser - Java</h5>
+                                                    <img class="img-fluid" src="imgs/Hero movie color pallet.jpg" alt="Example Image, Hero">
+                                                    <p>A movie program that condenses every frame into a single image, revealing how directors use color to tell stories. Example is from <i>Hero</i>, Zhang Yimou. </p>
+                                                    <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
+                                                        <a href="https://github.com/AndrewSymes/Movie-Color-Getter">GitHub</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card project-card pointer">
+                                                <div class="card-body">
+                                                    <h5>3D Renderer - Java</h5>
+                                                    <img class="img-fluid" src="imgs/teapot.gif" alt="">
+                                                    <p>3D renderer made using vanilla Java.</p>
+                                                    <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
+                                                        <a href="https://github.com/AndrewSymes/3d-renderer-from-scratch">GitHub</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card project-card pointer">
+                                                <div class="card-body">
+                                                    <h5>Checklist App - React</h5>
+                                                    <img class="img-fluid" src="imgs/Screenshot (1).png" alt="">
+                                                    <p>A simple checklist app inspired by Adam Savage's book: <i>Every Tool's a Hammer: Life is What You Make of it.</i></p>
+                                                    <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
+                                                        <a href="https://github.com/AndrewSymes/Checklist">GitHub</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card project-card pointer">
+                                                <div class="card-body">
+                                                    <h5>Photo Tiles - java</h5>
+                                                    <img class="img-fluid" src="imgs/example.png" alt="">
+                                                    <p>A program designed to create custom split canvas art at a lower price than retail. </p>
+                                                    <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
+                                                        <a href="https://github.com/AndrewSymes/Photo-tiles">GitHub</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="header-text d-flex">
+                                        <div>
+                                            Skills
+                                        </div>
+                                    </h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>
+                                                <b>Languages:</b> Python, Java, c++, 
+                                                Javascript, SQL, HTML, CSS,
+                                            </p>
+                                            <p>
+                                                <b>Tools:</b> Django, React, Numpy,
+                                                Jquery, Bootstrap, Sass, OpenCV
+                                            </p>
+                                            <p>
+                                                <b>Concepts:</b> Test Driven Development, A/B Testing, Query Optimization,
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    // $(".project-card").focusin((e)=>{
+    //     $(e.target).addClass('focus')
+    //     $('.dark-overlay').removeClass('d-none')
+    // })
+    // $('.dark-overlay').click(()=>{
+    //     $('.project-card').removeClass('focus')
+    //     $('.dark-overlay').addClass('d-none')
+    // })
+</script>
+</html>
